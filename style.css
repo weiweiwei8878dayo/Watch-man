@@ -1,11 +1,41 @@
+/* styles.css */
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 20px;
+  background-color: #f0f0f0;
 }
 
 h1 {
-    text-align: center;
+  margin: 0;
 }
 
-#video-container {
-    margin-top: 20px;
+#searchInput {
+  margin-right: 10px;
+}
+
+main {
+  display: flex;
+}
+
+#videoPlayer {
+  flex: 2;
+  padding: 20px;
+}
+
+#videoList {
+  flex: 1;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+  margin-bottom: 10px;
 }
