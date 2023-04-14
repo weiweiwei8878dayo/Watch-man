@@ -1,38 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>動画共有プラットフォーム</title>
-  <style>
-    #video-container {
-      width: 640px;
-      margin: 0 auto;
-    }
-    video {
-      width: 100%;
-      height: auto;
-    }
-  </style>
+    <title>動画共有プラットフォーム</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <div id="video-container">
-    <video id="video-player" controls></video>
-  </div>
-
-  <script>
-    const videoPlayer = document.getElementById('video-player');
-
-    // 動画のURLを設定
-    videoPlayer.src = 'https://example.com/video.mp4'; // ここに動画のURLを設定
-
-    // 再生ボタンがクリックされたときの処理
-    videoPlayer.addEventListener('play', () => {
-      console.log('動画が再生されました');
-    });
-
-    // 停止ボタンがクリックされたときの処理
-    videoPlayer.addEventListener('pause', () => {
-      console.log('動画が停止しました');
-    });
-  </script>
+    <h1>動画共有プラットフォーム</h1>
+    <form id="upload-form">
+        <input type="file" id="video-file" accept="video/*" />
+        <button type="submit">動画をアップロード</button>
+    </form>
+    <div id="video-container"></div>
+    <script src="script.js"></script>
 </body>
 </html>
