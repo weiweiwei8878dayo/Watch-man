@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>動画共有プラットフォーム</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <title>My YouTube-like Site</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1>動画共有プラットフォーム</h1>
-    <form id="upload-form">
-        <input type="file" id="video-file" accept="video/*" />
-        <button type="submit">動画をアップロード</button>
-    </form>
-    <div id="video-container"></div>
-    <script src="script.js"></script>
+  <header>
+    <h1>My YouTube-like Site</h1>
+    <input type="text" id="searchInput" placeholder="Search">
+    <button onclick="searchVideos()">Search</button>
+  </header>
+  <main>
+    <div id="videoPlayer">
+      <iframe id="videoFrame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div id="videoList">
+      <ul id="videoListItems">
+        <li onclick="playVideo('video1')">Video 1</li>
+        <li onclick="playVideo('video2')">Video 2</li>
+        <li onclick="playVideo('video3')">Video 3</li>
+        <li onclick="playVideo('video4')">Video 4</li>
+      </ul>
+    </div>
+  </main>
+  <script src="scripts.js"></script>
 </body>
+
 </html>
