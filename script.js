@@ -1,19 +1,12 @@
-const uploadForm = document.getElementById('upload-form');
-const videoFileInput = document.getElementById('video-file');
-const videoContainer = document.getElementById('video-container');
+// scripts.js
+function playVideo(videoId) {
+  var videoFrame = document.getElementById('videoFrame');
+  videoFrame.src = 'https://www.youtube.com/embed/' + videoId;
+}
 
-uploadForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const videoFile = videoFileInput.files[0];
-    if (!videoFile) {
-        return;
-    }
-
-    const videoElement = document.createElement('video');
-    videoElement.src = URL.createObjectURL(videoFile);
-    videoElement.controls = true;
-    videoElement.autoplay = true;
-    videoElement.loop = true;
-    videoContainer.appendChild(videoElement);
-});
-
+function searchVideos() {
+  var searchInput = document.getElementById('searchInput');
+  var query = searchInput.value;
+  // TODO: Implement video search functionality
+  alert('Search for "' + query + '" not implemented yet!');
+}
