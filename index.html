@@ -1,32 +1,61 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <title>My YouTube-like Site</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>YouTube風動画サイト</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <header>
-    <h1>My YouTube-like Site</h1>
-    <input type="text" id="searchInput" placeholder="Search">
-    <button onclick="searchVideos()">Search</button>
+    <div class="logo">YouTube</div>
+    <form class="search-form">
+      <input type="text" class="search-input" placeholder="検索">
+      <button type="submit" class="search-button">
+        <img src="search-icon.png" alt="検索">
+      </button>
+    </form>
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item"><a href="#">ホーム</a></li>
+        <li class="navbar-item"><a href="#">人気</a></li>
+        <li class="navbar-item"><a href="#">チャンネル</a></li>
+        <li class="navbar-item"><a href="#">履歴</a></li>
+        <li class="navbar-item"><a href="#">ログイン</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
-    <div id="videoPlayer">
-      <iframe id="videoFrame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+    <div class="video-container">
+      <div class="video-thumbnail">
+        <img src="video-thumbnail.jpg" alt="動画サムネイル">
+        <span class="video-duration">10:34</span>
+      </div>
+      <div class="video-info">
+        <h1 class="video-title">動画タイトル</h1>
+        <p class="video-description">動画の説明文がここに入ります。動画の説明文がここに入ります。動画の説明文がここに入ります。</p>
+        <div class="video-metadata">
+          <span class="video-views">1,234,567 回視聴</span>
+          <span class="video-date">2023/04/14</span>
+        </div>
+      </div>
     </div>
-    <div id="videoList">
-      <ul id="videoListItems">
-        <li onclick="playVideo('video1')">Video 1</li>
-        <li onclick="playVideo('video2')">Video 2</li>
-        <li onclick="playVideo('video3')">Video 3</li>
-        <li onclick="playVideo('video4')">Video 4</li>
-      </ul>
+    <!-- 他の動画の表示 -->
+    <div class="video-list">
+      <div class="video-thumbnail">
+        <img src="video-thumbnail.jpg" alt="動画サムネイル">
+        <span class="video-duration">05:22</span>
+      </div>
+      <div class="video-info">
+        <h1 class="video-title">別の動画タイトル</h1>
+        <p class="video-description">別の動画の説明文がここに入ります。別の動画の説明文がここに入ります。別の動画の説明文がここに入ります。</p>
+        <div class="video-metadata">
+          <span class="video-views">987,654 回視聴</span>
+          <span class="video-date">2023/04/13</span>
+        </div>
+      </div>
     </div>
   </main>
-  <script src="scripts.js"></script>
+  <footer>
+    <p>&copy; 2023 YouTube風動画サイト. All rights reserved.</p>
+  </footer>
 </body>
-
 </html>
